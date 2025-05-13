@@ -18,7 +18,7 @@ COPY . .
 
 RUN cd cmd/gost && \
     xx-go build && \
-    xx-verify gost
+    xx-verify ChatKnowProxy
 
 FROM alpine:3.20
 
@@ -27,6 +27,6 @@ RUN apk add --no-cache iptables
 
 WORKDIR /bin/
 
-COPY --from=builder /app/cmd/gost/gost .
+COPY --from=builder /app/cmd/gost/ChatKnowProxy .
 
-ENTRYPOINT ["/bin/gost"]
+ENTRYPOINT ["/bin/ChatKnowProxy"]

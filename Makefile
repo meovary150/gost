@@ -1,4 +1,4 @@
-NAME=gost
+NAME=ChatKnowProxy
 BINDIR=bin
 VERSION=$(shell cat cmd/gost/version.go | grep 'version =' | sed 's/.*\"\(.*\)\".*/\1/g')
 GOBUILD=CGO_ENABLED=0 go build --ldflags="-s -w" -v -x -a

@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"errors"
 	"net/http"
 	"os"
 	"os/signal"
@@ -84,6 +83,7 @@ func (p *program) run(cfg *config.Config) error {
 		}()
 	}
 
+	/*
 	if p.srvApi != nil {
 		p.srvApi.Close()
 		p.srvApi = nil
@@ -107,8 +107,10 @@ func (p *program) run(cfg *config.Config) error {
 			}
 		}()
 	}
+	*/
 
 	xmetrics.Enable(false)
+	/*
 	if p.srvMetrics != nil {
 		p.srvMetrics.Close()
 		p.srvMetrics = nil
@@ -134,7 +136,9 @@ func (p *program) run(cfg *config.Config) error {
 			}
 		}()
 	}
+	*/
 
+	/*
 	if p.srvProfiling != nil {
 		p.srvProfiling.Close()
 		p.srvProfiling = nil
@@ -160,6 +164,7 @@ func (p *program) run(cfg *config.Config) error {
 			}
 		}()
 	}
+	*/
 
 	return nil
 }

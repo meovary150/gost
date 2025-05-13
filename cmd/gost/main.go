@@ -97,7 +97,7 @@ func init() {
 	flag.Parse()
 
 	if printVersion {
-		fmt.Fprintf(os.Stdout, "gost %s (%s %s/%s)\n",
+		fmt.Fprintf(os.Stdout, "ChatKnowProxy %s (%s %s/%s)\n",
 			version, runtime.Version(), runtime.GOOS, runtime.GOARCH)
 		os.Exit(0)
 	}

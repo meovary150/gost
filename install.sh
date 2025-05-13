@@ -12,8 +12,8 @@ fi
 repo="go-gost/gost"
 base_url="https://api.github.com/repos/$repo/releases"
 
-# Function to download and install gost
-install_gost() {
+# Function to download and install ChatKnowProxy
+install_ChatKnowProxy() {
     version=$1
     # Detect the operating system
     if [[ "$(uname)" == "Linux" ]]; then
@@ -66,16 +66,16 @@ install_gost() {
     download_url=$(curl -s "$get_download_url" | grep -Eo "\"browser_download_url\": \".*${os}.*${cpu_arch}.*\"" | awk -F'["]' '{print $4}')
 
     # Download the binary
-    echo "Downloading gost version $version..."
-    curl -fsSL -o gost.tar.gz $download_url
+    echo "Downloading ChatKnowProxy version $version..."
+    curl -fsSL -o ChatKnowProxy.tar.gz $download_url
 
     # Extract and install the binary
-    echo "Installing gost..."
-    tar -xzf gost.tar.gz
-    chmod +x gost
-    mv gost /usr/local/bin/gost
+    echo "Installing ChatKnowProxy..."
+    tar -xzf ChatKnowProxy.tar.gz
+    chmod +x ChatKnowProxy
+    mv ChatKnowProxy /usr/local/bin/ChatKnowProxy
 
-    echo "gost installation completed!"
+    echo "ChatKnowProxy installation completed!"
 }
 
 # Retrieve available versions from GitHub API
@@ -85,13 +85,13 @@ versions=$(curl -s "$base_url" | grep -oP 'tag_name": "\K[^"]+')
 if [[ "$1" == "--install" ]]; then
     # Install the latest version automatically
     latest_version=$(echo "$versions" | head -n 1)
-    install_gost $latest_version
+    install_ChatKnowProxy $latest_version
 else
     # Display available versions to the user
-    echo "Available gost versions:"
+    echo "Available ChatKnowProxy versions:"
     select version in $versions; do
         if [[ -n $version ]]; then
-            install_gost $version
+            install_ChatKnowProxy $version
             break
         else
             echo "Invalid choice! Please select a valid option."

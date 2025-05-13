@@ -86,7 +86,7 @@ func init() {
 	var printVersion bool
 
 	flag.Var(&services, "L", "service list")
-	flag.Var(&nodes, "F", "chain node list")
+	// flag.Var(&nodes, "F", "chain node list")
 	flag.StringVar(&cfgFile, "C", "", "configuration file")
 	flag.BoolVar(&printVersion, "V", false, "print version")
 	flag.StringVar(&outputFormat, "O", "", "output format, one of yaml|json format")

@@ -3,7 +3,7 @@ package main
 import (
 	// Register connectors
 	_ "github.com/go-gost/x/connector/direct"
-	_ "github.com/go-gost/x/connector/forward"
+	// _ "github.com/go-gost/x/connector/forward"
 	_ "github.com/go-gost/x/connector/http"
 	_ "github.com/go-gost/x/connector/http2"
 	_ "github.com/go-gost/x/connector/relay"
@@ -16,7 +16,7 @@ import (
 	_ "github.com/go-gost/x/connector/ss/udp"
 	_ "github.com/go-gost/x/connector/sshd"
 	_ "github.com/go-gost/x/connector/tcp"
-	_ "github.com/go-gost/x/connector/tunnel"
+	// _ "github.com/go-gost/x/connector/tunnel"
 	_ "github.com/go-gost/x/connector/unix"
 
 	// Register dialers
@@ -51,8 +51,8 @@ import (
 	_ "github.com/go-gost/x/handler/auto"
 	_ "github.com/go-gost/x/handler/dns"
 	_ "github.com/go-gost/x/handler/file"
-	_ "github.com/go-gost/x/handler/forward/local"
-	_ "github.com/go-gost/x/handler/forward/remote"
+	// _ "github.com/go-gost/x/handler/forward/local"
+	// _ "github.com/go-gost/x/handler/forward/remote"
 	_ "github.com/go-gost/x/handler/http"
 	_ "github.com/go-gost/x/handler/http2"
 	_ "github.com/go-gost/x/handler/http3"
@@ -70,7 +70,7 @@ import (
 	_ "github.com/go-gost/x/handler/sshd"
 	_ "github.com/go-gost/x/handler/tap"
 	_ "github.com/go-gost/x/handler/tun"
-	_ "github.com/go-gost/x/handler/tunnel"
+	// _ "github.com/go-gost/x/handler/tunnel"
 	_ "github.com/go-gost/x/handler/unix"
 
 	// Register listeners

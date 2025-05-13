@@ -33,8 +33,7 @@ import (
 	// _ "github.com/go-gost/x/dialer/mtcp"
 	// _ "github.com/go-gost/x/dialer/mtls"
 	// _ "github.com/go-gost/x/dialer/mws"
-	// _ "github.com/go-gost/x/dialer/obfs/http"
-	// _ "github.com/go-gost/x/dialer/obfs/tls"
+
 	// _ "github.com/go-gost/x/dialer/pht"
 	// _ "github.com/go-gost/x/dialer/quic"
 	// _ "github.com/go-gost/x/dialer/serial"
@@ -88,8 +87,7 @@ import (
 	// _ "github.com/go-gost/x/listener/mtcp"
 	// _ "github.com/go-gost/x/listener/mtls"
 	// _ "github.com/go-gost/x/listener/mws"
-	// _ "github.com/go-gost/x/listener/obfs/http"
-	// _ "github.com/go-gost/x/listener/obfs/tls"
+
 	// _ "github.com/go-gost/x/listener/pht"
 	// _ "github.com/go-gost/x/listener/quic"
 	// _ "github.com/go-gost/x/listener/redirect/tcp"

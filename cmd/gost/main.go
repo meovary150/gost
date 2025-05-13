@@ -85,19 +85,19 @@ func worker(id int, args []string, ctx *context.Context, ret *int) {
 func init() {
 	var printVersion bool
 
-	flag.Var(&services, "L", "service list")
+	flag.Var(&services, "service", "service list")
 	// flag.Var(&nodes, "F", "chain node list")
-	flag.StringVar(&cfgFile, "C", "", "configuration file")
-	flag.BoolVar(&printVersion, "V", false, "print version")
-	flag.StringVar(&outputFormat, "O", "", "output format, one of yaml|json format")
-	flag.BoolVar(&debug, "D", false, "debug mode")
-	flag.BoolVar(&trace, "DD", false, "trace mode")
+	flag.StringVar(&cfgFile, "config", "", "configuration file")
+	flag.BoolVar(&printVersion, "version", false, "print version")
+	flag.StringVar(&outputFormat, "format", "", "output format, one of yaml|json format")
+	flag.BoolVar(&debug, "debug", false, "debug mode")
+	flag.BoolVar(&trace, "trace", false, "trace mode")
 	flag.StringVar(&apiAddr, "api", "", "api service address")
 	flag.StringVar(&metricsAddr, "metrics", "", "metrics service address")
 	flag.Parse()
 
 	if printVersion {
-		fmt.Fprintf(os.Stdout, "gost %s (%s %s/%s)\n",
+		fmt.Fprintf(os.Stdout, "securenet %s (%s %s/%s)\n",
 			version, runtime.Version(), runtime.GOOS, runtime.GOARCH)
 		os.Exit(0)
 	}
